@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+	<head>
+		<meta name="keywords" content="gursimran gus singh khalsa" />
+		<!-- Core Angular JS Framework -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+
+    	<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Rokkitt|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'> 
+		<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>   
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/test.css">
+		<!-- Bootstrap -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<!-- JavaScript files -->
+    	<script type="text/javascript" src="js/home.js"></script>
+    	
+    	<!-- JQeury -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+    			$("#open").click(function(){
+    				$("#menu").slideToggle("slow");
+    			});
+    		});
+    	</script>
+    	
+	</head>
+
+	<body>
+		<header class="container-fluid">
+			<div ng-controller="NavController" class="nav-container">
+				<div id="open"><span class="glyphicon glyphicon-align-justify"></span></div>
+				<div id="menu">
+					<ul>
+						<li ng-repeat='option in options' class="navOptions">
+							<a href={{option.link}}>{{ option.value }}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h1 id='title'>GURSMIRAN KHALSA <br /><span style="font-size: 25px;">Computer Science Student, University of Kent</span></h1>
+		</header>
+
+		<!--profile area -->
+		<section class="container-fluid">
+			<div class="row">
+				<h1 style="padding-bottom: 50%;"></h1>
+			</div>
+		</section>
+
+		<!-- Project Area -->
+		<section class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="img/img2.jpg" />
+				</div>
+				<div class="col-sm-4">
+					<img src="img/img2.jpg" />
+				</div>
+				<div class="col-sm-4">
+					<img src="img/img2.jpg" />
+				</div>
+			</div>
+		</section>
+
+	</body>
+</html>
+
+
