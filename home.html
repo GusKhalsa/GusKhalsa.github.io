@@ -14,36 +14,22 @@
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/home.css">
-		<link rel="stylesheet" type="text/css" href="css/test.css">
 		<!-- Bootstrap -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 		<!-- JavaScript files -->
     	<script type="text/javascript" src="js/home.js"></script>
     	
-    	<!-- JQeury -->
+    	<!-- JQuery -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    	<script type="text/javascript">
-    		$(document).ready(function(){
-    			$("#open").click(function(){
-    				$("#menu").slideToggle("slow");
-    			});
-    		});
-    	</script>
+    	<script src="js/nav.js"></script>
     	
 	</head>
 
 	<body>
 		<header class="container-fluid">
 			<div ng-controller="NavController" class="nav-container">
-				<div id="open"><span class="glyphicon glyphicon-align-justify"></span></div>
-				<div id="menu">
-					<ul>
-						<li ng-repeat='option in options' class="navOptions">
-							<a href={{option.link}}>{{ option.value }}</a>
-						</li>
-					</ul>
-				</div>
+				<div ng-include="'nav.html'"></div>
 			</div>
 			<h1 id='title'>GURSMIRAN KHALSA <br /><span style="font-size: 25px;">Computer Science Student, University of Kent</span></h1>
 		</header>
@@ -58,13 +44,7 @@
 		<!-- Project Area -->
 		<section class="container-fluid">
 			<div class="row">
-				<div class="col-sm-4">
-					<img src="img/img2.jpg" />
-				</div>
-				<div class="col-sm-4">
-					<img src="img/img2.jpg" />
-				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4" ng-repeat="project in projects">
 					<img src="img/img2.jpg" />
 				</div>
 			</div>
