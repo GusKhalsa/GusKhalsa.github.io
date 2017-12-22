@@ -1,70 +1,39 @@
 *{
-	//border: 1px solid rgba(0, 0, 0, 0.3);
+	/*border: 1px solid rgba(0, 0, 0, 0.3);*/
 }
 
 body {
 	-webkit-font-smoothing: antialiased;
-	background-image: url('../img/background.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+}
 
+/* Nav bar */
+
+header {
+	background: black;
 }
 
 .nav-container {
 	position: fixed;
 	z-index: 999;
-	width: 70%;
-}
-
-#title {
 	width: 100%;
-	height: 100%;
-	float: left;
-	font-family: 'Karla', sans-serif;
-	color: white;
-	font-size: 75px;
-	margin: 10% auto;
-	text-align: center;
+	height: auto;
+	float: right;
+	background: white;
 }
-
-#open {
-	font-size: 30px;
-	text-align: center;
-	color: black;
-	background-color: white;
-	width: 70px;
-	margin: 1em;
-	padding: 0.5em;
-	border-radius: 100%;
-}
-
-#open:hover {
-	cursor: pointer;
-}
-
 
 #menu {
-	position: relative;
-	left: 10%;
-	top: -100px;
-	display: none;
-	width: 50%;
-	background: black;
-	border: 1px solid white;
-}
-
-#menu ul {
+	text-align: center;
+	display: inline;
 	width: auto;
 	height: auto;
+	margin: 15px auto;
+	padding: 10px;
 }
 
 #menu ul li a {
 	text-decoration: none;
-	font-size: 25px;
-	color: white;
-	margin: 20px auto 0px auto;
+	font-size: 15px;
+	color: black;
 }
 
 #menu ul li a:hover {text-decoration: none;}
@@ -74,15 +43,62 @@ body {
 	margin: 2em;
 }
 
-.col-sm-4 {
-	margin-left: -15px;
-	margin-top: 10%;
-}
+/* ---------------------------------------- */
 
-.row {
-	background-image: url('../img/background.jpeg');
+/* Second section */
+
+.jumbotron {
+	text-align: center;
+	background: url("../img/background3.jpeg");
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat;
+}
+
+#buttonToProfile {
+	text-decoration: none;
+	border: 1px solid white;
+	color: white;
+	padding: 1em;
+}
+
+#buttonToProfile:hover {
+	background-color: white;
+	color: black;
+}
+
+#title {
+	width: 100%;
+	height: 100%;
+	float: left;
+	font-family: 'Karla', sans-serif;
+	color: white;
+	text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+	font-size: 75px;
+	margin: 15% auto;
+	text-align: center;
+}
+
+
+/* -------------------------------------- */
+
+/* Third section */
+
+.profile-container {
+	background: white;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+footer ul li{
+	height: auto;
+	display: inline;
+	float: right;
+	padding: 1em;
+}
+
+footer {
+	margin-top: 1.3em;
+	border-top: 1px solid black;
 }

@@ -27,17 +27,34 @@
 	</head>
 
 	<body>
-		<header class="container-fluid">
-			<div ng-controller="NavController" class="nav-container">
-				<div ng-include="'nav.html'"></div>
-			</div>
-			<h1 id='title'>GURSMIRAN KHALSA <br /><span style="font-size: 25px;">Computer Science Student, University of Kent</span></h1>
+		<!-- Navigation bar -->
+		<header class="container-fluid nav-container" ng-controller="NavController">
+			<div ng-include="'nav.html'"></div>
 		</header>
 
+		<!-- Jumbotron -->
+		<section class="jumbotron container-fluid">
+			<h1 id='title'>GURSMIRAN KHALSA <br /><span style="font-size: 30px;">Computer Science Student, University of Kent</span></h1>
+			<a id="buttonToProfile" href="#profile">LEARN MORE</a>
+		</section>
+
 		<!--profile area -->
-		<section class="container-fluid">
-			<div class="row">
-				<h1 style="padding-bottom: 50%;"></h1>
+		<section class="container-fluid profile-container" ng-controller="ProfileController">
+			<div id="profile">
+				<h1>About Me</h1>
+				<h3>Education</h3>
+				<ol>
+					<li ng-repeat="list in education">	{{list.school}} | {{startDate}} - {{endDate}} <br /> {{list.subject}}
+					</li>
+				</ol>
+				<button ng-click="showModules = !showModules">Show Modules</button>
+				<ul ng-hide="!showModules">
+					<li ng-repeat="module in modules">{{module}}</li>
+				</ul>
+				<h1>Latest Work Experience</h1>
+
+				<p ng-repeat="job in workExperience" ng-if="$last">{{job.company}} | {{job.role}} | {{job.startDate}} - {{job.endDate}}</p>
+				<a href={{CV}}>DOWNLOAD CV </a>
 			</div>
 		</section>
 
@@ -45,10 +62,18 @@
 		<section class="container-fluid">
 			<div class="row">
 				<div class="col-sm-4" ng-repeat="project in projects">
-					<img src="img/img2.jpg" />
+					<img ng-src="img/img2.jpg" />
 				</div>
 			</div>
 		</section>
+
+		<footer ng-controller="ProfileController">
+			<ul>
+				<li ng-repeat="contact in contacts">
+					<a href={{contact.link}}><img src={{contact.icon}} /></a>
+				</li>
+			</ul>
+		</footer>
 
 	</body>
 </html>
