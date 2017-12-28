@@ -51,7 +51,8 @@
 
 		<!--profile area -->
 		<section class="container-fluid" id="profile-container" ng-controller="ProfileController">
-			<div class="row">
+
+			<div class="row description-container">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-4">
 					<img ng-src={{profilepicture}} id="profilepic" />
@@ -62,9 +63,9 @@
 				<div class="col-sm-2"></div>
 			</div>
 
-			<div class="row education-container">
+			<div class="row career-container">
 				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
+				<div class="col-sm-4" style="border-right: 1px solid white;">
 					<h2 style="color: blue;">EDUCATION</h2>
 					<ol>
 						<li ng-repeat="instance in education">
@@ -73,13 +74,8 @@
 							<p>{{instance.subject}}</p>
 						</li>
 					</ol>
-				</div>				
-				<div class="col-sm-2"></div>
-			</div>
-
-			<div class="row experience-container">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
+				</div>		
+				<div class="col-sm-4">
 					<h2 style="color: blue;">WORK EXPERIENCE</h2>
 					<ol>
 						<li ng-repeat="instance in workExperience">
@@ -91,11 +87,12 @@
 				<div class="col-sm-2"></div>
 			</div>
 
-			<div class="row skills-container">
-				
-			</div>
 			<div class="row cv-container" style="text-align: center;">
 				<a href="#" id="cv-button">DOWNLOAD CV</a>
+			</div>
+
+			<div class="skills-container">
+				
 			</div>
 
 		</section>			
