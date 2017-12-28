@@ -1,5 +1,5 @@
 *{
-	/*border: 1px solid rgba(0, 0, 0, 0.3);*/
+	/*border: 1px solid rgba(255, 255, 255, 0.3);*/
 }
 
 body {
@@ -18,7 +18,14 @@ header {
 	width: 100%;
 	height: auto;
 	float: right;
-	background: white;
+	background: transparent;
+	border-bottom: 1px solid white;
+}
+
+#menu h3 {
+	font-family: "Karla", sans-serif;
+	color: white;
+	float: left;
 }
 
 #menu {
@@ -26,21 +33,32 @@ header {
 	display: inline;
 	width: auto;
 	height: auto;
-	margin: 15px auto;
-	padding: 10px;
+	margin: 10px auto;
+	padding: 5px;
+}
+
+.nav-container.scrolled {
+  background-color: black !important;
+  transition: background-color 1s linear;
+  border-bottom: transparent;
+}
+
+#menu ul {
+	float: right;
+	margin-top: 1.5em;
 }
 
 #menu ul li a {
 	text-decoration: none;
 	font-size: 15px;
-	color: black;
+	color: white;
 }
 
 #menu ul li a:hover {text-decoration: none;}
 
 .navOptions {
 	display: inline;
-	margin: 2em;
+	margin: 1.5em;
 }
 
 /* ---------------------------------------- */
@@ -54,30 +72,39 @@ header {
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+	padding-bottom: 30% !important;
 }
 
-#buttonToProfile {
+.icons li {
+	list-style-type: none;
+	display: inline;
+}
+
+.icons ul {
+	padding-left: -50px;
+}
+
+.buttonToProfile {
 	text-decoration: none;
 	border: 1px solid white;
 	color: white;
 	padding: 1em;
 }
 
-#buttonToProfile:hover {
-	background-color: white;
-	color: black;
+.buttonToProfile:hover{
+	background-color: black;
+	color: white;
+	text-decoration: none;
 }
 
+
 #title {
-	width: 100%;
-	height: 100%;
-	float: left;
+	width: auto;
 	font-family: 'Karla', sans-serif;
 	color: white;
-	text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
-	font-size: 75px;
-	margin: 15% auto;
+	font-size: 60px;
 	text-align: center;
+	margin-top: 10%;
 }
 
 
@@ -85,19 +112,59 @@ header {
 
 /* Third section */
 
-.profile-container {
-	background: white;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
+#profile-container {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: -30px;
+	background-color: white;
 }
 
-footer ul li{
-	height: auto;
-	display: inline;
-	float: right;
+#profile-container{
+	font-family: 'Karla', sans-serif;
+	padding: 2.5em;
+	font-size: 15px;
+	color: black;
+}
+
+#profilepic {
+	width: 100%;
+	height: 100%;
+}
+
+.education-container ol li, .experience-container ol li{
+	list-style-type: none;
+	margin-bottom: 50px;
+}
+
+.education-container, .experience-container, .cv-container{
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+}
+
+.experience-container {
+	padding-bottom: 50px;
+}
+
+.cv-container {
+	padding-bottom: 5%; 
+}
+
+#cv-button {
 	padding: 1em;
+	color: white;
+	border: 1px solid white;
+	margin-top: 250px;
+	text-decoration: none;
 }
 
+#cv-button:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+
+/* ------------------------------------- */
+
+/* Footer */
 footer {
 	margin-top: 1.3em;
 	border-top: 1px solid black;

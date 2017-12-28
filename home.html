@@ -10,7 +10,7 @@
     	<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Rokkitt|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'> 
-		<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>   
+		<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>  
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/home.css">
@@ -19,10 +19,17 @@
 
 		<!-- JavaScript files -->
     	<script type="text/javascript" src="js/home.js"></script>
-    	
+
     	<!-- JQuery -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    	<script src="js/nav.js"></script>
+    	<script>
+    		$(function () {
+  				$(document).scroll(function () {
+    				var $nav = $(".nav-container");
+    				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  				});
+			});
+    	</script>
     	
 	</head>
 
@@ -32,50 +39,69 @@
 			<div ng-include="'nav.html'"></div>
 		</header>
 
-		<!-- Jumbotron -->
+		<!-- Jumbotron/Title -->
 		<section class="jumbotron container-fluid">
-			<h1 id='title'>GURSMIRAN KHALSA <br /><span style="font-size: 30px;">Computer Science Student, University of Kent</span></h1>
-			<a id="buttonToProfile" href="#profile">LEARN MORE</a>
+			<h1 id='title'>Gursimran Khalsa <br /><span style="font-size: 30px;">Computer Science Student, University of Kent</span></h1>
+			<ul class="container-fluid icons" ng-controller="ProfileController">
+				<li ng-repeat="contact in contacts">
+					<a target="_blank" href={{contact.link}}><img src={{contact.icon}} /></a>
+				</li>
+			</ul>
 		</section>
 
 		<!--profile area -->
-		<section class="container-fluid profile-container" ng-controller="ProfileController">
-			<div id="profile">
-				<h1>About Me</h1>
-				<h3>Education</h3>
-				<ol>
-					<li ng-repeat="list in education">	{{list.school}} | {{startDate}} - {{endDate}} <br /> {{list.subject}}
-					</li>
-				</ol>
-				<button ng-click="showModules = !showModules">Show Modules</button>
-				<ul ng-hide="!showModules">
-					<li ng-repeat="module in modules">{{module}}</li>
-				</ul>
-				<h1>Latest Work Experience</h1>
-
-				<p ng-repeat="job in workExperience" ng-if="$last">{{job.company}} | {{job.role}} | {{job.startDate}} - {{job.endDate}}</p>
-				<a href={{CV}}>DOWNLOAD CV </a>
-			</div>
-		</section>
-
-		<!-- Project Area -->
-		<section class="container-fluid">
+		<section class="container-fluid" id="profile-container" ng-controller="ProfileController">
 			<div class="row">
-				<div class="col-sm-4" ng-repeat="project in projects">
-					<img ng-src="img/img2.jpg" />
+				<div class="col-sm-2"></div>
+				<div class="col-sm-4">
+					<img ng-src={{profilepicture}} id="profilepic" />
 				</div>
+				<div class="col-sm-4">
+					<p>Hello, my name is Gursimran Khalsa(everyone calls me Gus) and I am a 2nd year Computer Science student at the University of Kent. I consider myself a problem solver, creative thinker and a very calm individual. I started programming in year 10 of secondary school when I was introduced to Python which I proceeded to use to develop a schedule maker. For the past year and a half, I have been learning and working with Java from GUI's and text based games to compressing images into drawing commands or converting drawing commands into images. I am interested in cyber security and deep learning. When i'm not programming I enjoy sports, travelling, playing the piano, gaming and a lot of other activities.</p>
+				</div>
+				<div class="col-sm-2"></div>
 			</div>
-		</section>
 
-		<footer ng-controller="ProfileController">
-			<ul>
-				<li ng-repeat="contact in contacts">
-					<a href={{contact.link}}><img src={{contact.icon}} /></a>
-				</li>
-			</ul>
-		</footer>
+			<div class="row education-container">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<h2 style="color: blue;">EDUCATION</h2>
+					<ol>
+						<li ng-repeat="instance in education">
+							<h4>{{instance.school}}</h4>
+							<em>{{instance.startDate}} - {{instance.endDate}}</em>
+							<p>{{instance.subject}}</p>
+						</li>
+					</ol>
+				</div>				
+				<div class="col-sm-2"></div>
+			</div>
 
+			<div class="row experience-container">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<h2 style="color: blue;">WORK EXPERIENCE</h2>
+					<ol>
+						<li ng-repeat="instance in workExperience">
+							<h4>{{instance.company}} | {{instance.role}}</h4>
+							<em>{{instance.startDate}} - {{instance.endDate}}</em>
+						</li>
+					</ol>
+				</div>				
+				<div class="col-sm-2"></div>
+			</div>
+
+			<div class="row cv-container" style="text-align: center;">
+				<a href="#" id="cv-button">DOWNLOAD CV</a>
+			</div>
+
+		</section>			
 	</body>
 </html>
 
-
+		<!--
+		<a href={{CV}} class="buttonToProfile">DOWNLOAD CV</a> 
+		<button ng-click="showModules = !showModules">Show Modules</button>
+		<ul ng-hide="!showModules" style="list-style-type: none;">
+			<li ng-repeat="module in modules">{{module}}</li>
+		</ul> -->
