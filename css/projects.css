@@ -1,0 +1,44 @@
+body {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+	font-family: 'Karla', sans-serif;
+}
+
+.project-container {
+	text-align: center;
+	margin-top: 5%;
+	color: white;
+}
+
+.project-container .listing {
+	display: flex;
+  	display: -webkit-flex;
+  	flex-wrap: wrap;
+}
+
+.project-container .listing .col-sm-4 {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-bottom: 10%;
+	color: black;
+}
+
+.content {
+	background: rgba(255, 255, 255, 0.3);
+	margin-top: 50%;
+}
+
+.project-container .listing .col-sm-4 a {
+	border: 1px solid black;
+	border-radius: 10%;
+	background: white;
+	padding: 0.3em 0.5em;
+	display: inline-block;
+} 
+
+.project-container .listing .col-sm-4 a:hover {
+	cursor: pointer;
+}
