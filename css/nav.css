@@ -10,8 +10,7 @@ header {
 	width: 100%;
 	height: auto;
 	float: right;
-	background: transparent;
-	border-bottom: 1px solid white;
+	background: black;
 }
 
 #menu h3 {
@@ -29,11 +28,6 @@ header {
 	padding: 5px;
 }
 
-.nav-container.scrolled {
-  background-color: black !important;
-  transition: background-color 1s linear;
-  border-bottom: transparent;
-}
 
 #menu ul {
 	float: right;

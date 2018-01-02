@@ -18,11 +18,12 @@ h1 {
   	flex-wrap: wrap;
 }
 
-.project-container .listing .col-sm-4 {
+.project-container .listing .col-sm-3 {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 10%;
+	margin: 25px 45px;
 	color: black;
 }
 

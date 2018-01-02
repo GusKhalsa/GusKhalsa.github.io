@@ -4,7 +4,7 @@ app.controller('NavController', function($scope){
 	$scope.options = [ 
 		{value: 'HOME', link: 'home.html'},
 		{value: 'PROJECTS', link: 'projects.html'},
-		{value: 'BLOG', link: ''}
+		{value: 'BLOG', link: 'blog.html'}
 	];
 });
 
