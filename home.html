@@ -15,6 +15,7 @@
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/home.css">
 		<link rel="stylesheet" type="text/css" href="css/nav.css">
+		<link rel="stylesheet" type="text/css" href="css/projects.css">
 		<!-- Bootstrap -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -44,56 +45,35 @@
 		<!--profile area -->
 		<section class="container-fluid" id="profile-container" ng-controller="ProfileController">
 
-			<div class="row description-container">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-4">
+			<div class="row">
+				<div class="col-sm-6">
 					<img ng-src={{profilepicture}} id="profilepic" />
+					<div class="row cv-container" style="text-align: center;">
+						<a href="#" id="cv-button">DOWNLOAD CV</a>
+					</div>
 				</div>
-				<div class="col-sm-4">
-					<p>Hello, my name is Gursimran Khalsa(everyone calls me Gus) and I am a 2nd year Computer Science student at the University of Kent. I consider myself a problem solver, creative thinker and a very calm individual. I started programming in year 10 of secondary school when I was introduced to Python which I proceeded to use to develop a schedule maker. For the past year and a half, I have been learning and working with Java from GUI's and text based games to compressing images into drawing commands or converting drawing commands into images. I am interested in cyber security and deep learning. When i'm not programming I enjoy sports, travelling, playing the piano, gaming and a lot of other activities.</p>
+				<div class="col-sm-6 aboutme-container">
+					<h1>ABOUT ME</h1>		
+					<p>
+						Hello, my name is Gursimran Khalsa(everyone calls me Gus) and I am a 2nd year Computer Science student at the University of Kent. I consider myself a problem solver, creative thinker and a very calm individual. I started programming in year 10 of secondary school when I was introduced to Python which I proceeded to use to develop a schedule maker. For the past year and a half, I have been learning and working with Java from GUI's and text based games to compressing images into drawing commands or converting drawing commands into images. I am interested in cyber security and deep learning. When i'm not programming I enjoy sports, travelling, playing the piano, gaming and a lot of other activities
+					</p>		
 				</div>
-				<div class="col-sm-2"></div>
 			</div>
-
-			<div class="row career-container">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-4" style="border-right: 1px solid white;">
-					<h2 style="color: blue;">EDUCATION</h2>
-					<ol>
-						<li ng-repeat="instance in education">
-							<h4>{{instance.school}}</h4>
-							<em>{{instance.startDate}} - {{instance.endDate}}</em>
-							<p>{{instance.subject}}</p>
-						</li>
-					</ol>
-				</div>		
-				<div class="col-sm-4">
-					<h2 style="color: blue;">WORK EXPERIENCE</h2>
-					<ol>
-						<li ng-repeat="instance in workExperience">
-							<h4>{{instance.company}} | {{instance.role}}</h4>
-							<em>{{instance.startDate}} - {{instance.endDate}}</em>
-						</li>
-					</ol>
-				</div>				
-				<div class="col-sm-2"></div>
+		</section>
+		<section class="container-fluid project-container">
+			<div class="row">
+				<h1>PROJECTS</h1>
 			</div>
-
-			<div class="row cv-container" style="text-align: center;">
-				<a href="#" id="cv-button">DOWNLOAD CV</a>
+			<div class="row listing" ng-controller="ProjectController">
+				<div class="col-sm-3" ng-repeat="project in projects" style="background: url({{project.thumbnail}});" >
+					<div class="content">
+						<h3>{{project.title}}</h3>
+						<em>{{project.date}}</em>
+						<p>{{project.description}}</p>
+						<a ng-href={{project.downloadLink}}><span class="glyphicon glyphicon-download-alt"></span></a>
+					</div>
+				</div>
 			</div>
-
-			<div class="skills-container">
-				
-			</div>
-
-		</section>			
+		</section>		
 	</body>
 </html>
-
-		<!--
-		<a href={{CV}} class="buttonToProfile">DOWNLOAD CV</a> 
-		<button ng-click="showModules = !showModules">Show Modules</button>
-		<ul ng-hide="!showModules" style="list-style-type: none;">
-			<li ng-repeat="module in modules">{{module}}</li>
-		</ul> -->

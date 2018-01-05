@@ -10,6 +10,11 @@ h1 {
 	text-align: center;
 	margin-top: 5%;
 	color: white;
+	background: url("../img/background2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 .project-container .listing {
