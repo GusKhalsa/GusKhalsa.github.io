@@ -17,16 +17,16 @@ h1 {
 	background-size: cover;
 }
 
-.project-container .listing {
+.project-container #project-listing .col-sm-3 img {
+	width: auto;
+	height: auto;
+}
+
+
+.project-container #project-listing .col-sm-3 {
 	display: flex;
   	display: -webkit-flex;
   	flex-wrap: wrap;
-}
-
-.project-container .listing .col-sm-3 {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
 	padding-bottom: 10%;
 	margin: 25px 45px;
 	color: black;
@@ -34,10 +34,10 @@ h1 {
 
 .content {
 	background: rgba(255, 255, 255, 0.3);
-	margin-top: 50%;
+	width: 250px;
 }
 
-.project-container .listing .col-sm-4 a {
+.project-container #project-listing .col-sm-4 a {
 	border: 1px solid black;
 	border-radius: 10%;
 	background: white;
@@ -45,6 +45,6 @@ h1 {
 	display: inline-block;
 } 
 
-.project-container .listing .col-sm-4 a:hover {
+.project-container #project-listing .col-sm-4 a:hover {
 	cursor: pointer;
 }

@@ -3,7 +3,7 @@ var app = angular.module('MyApp', []);
 app.controller('NavController', function($scope){
 	$scope.options = [ 
 		{value: 'HOME', link: 'home.html'},
-		{value: 'PROJECTS', link: 'projects.html'},
+		{value: 'PROJECTS', link: 'home.html#project-listing'},
 		{value: 'BLOG', link: 'blog.html'}
 	];
 });
@@ -36,6 +36,7 @@ app.controller('ProfileController', function($scope){
 	$scope.showModules = function(){
 		$scope.show = !$scope.show;
 	};
+
 	$scope.modules = [{module: 'Intro to Object Oriented Programming', result: "87%", link: "https://www.kent.ac.uk/courses/modules/module/CO320"},
 					  {module: 'Human Computer Interaction', result: "64%", link: "https://www.kent.ac.uk/courses/modules/module/CO328"},
 					  {module: 'Foundations of Computing I', result: "95%", link: "https://www.kent.ac.uk/courses/modules/module/CO322"},
@@ -76,13 +77,13 @@ app.controller('ProfileController', function($scope){
 
 app.controller('ProjectController', function($scope){
 	$scope.projects = [
-	{thumbnail: "img/profilepic.png", title: "Project1", 
+	{thumbnail: "img/profilepic1.JPG", title: "Coming Soon", 
 	description: "This is the description for the project",
 	date:"01/01/1914", downloadLink: ""},
-	{thumbnail: "img/profilepic.png", title: "Project2",
+	{thumbnail: "img/profilepic1.JPG", title: "Project2",
 	description: "This is the description for the project", 
 	date:"01/02/1915", downloadLink: ""},
-	{thumbnail: "img/profilepic.png", title: "Project3", 
+	{thumbnail: "img/profilepic1.JPG", title: "Project3", 
 	description: "This is the description for the project", 
 	date:"01/03/1916", downloadLink: ""}
 	];

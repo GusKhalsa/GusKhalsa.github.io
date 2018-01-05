@@ -24,7 +24,22 @@
 
     	<!-- JQuery -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    	<script type="text/javascript">
+		    $(document).ready(function(){
+			  // Add smooth scrolling to all links
+			     $("a").on('click', function(event) {
+			    if (this.hash !== "") {
+			      event.preventDefault();
+			      var hash = this.hash;
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 800, function(){
+			        window.location.hash = hash;
+			      });
+			    }
+			  });
+			});
+    	</script>
     	
 	</head>
 
@@ -60,12 +75,14 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="container-fluid project-container">
 			<div class="row">
 				<h1>PROJECTS</h1>
 			</div>
-			<div class="row listing" ng-controller="ProjectController">
-				<div class="col-sm-3" ng-repeat="project in projects" style="background: url({{project.thumbnail}});" >
+			<div class="row" id="project-listing" ng-controller="ProjectController">
+				<div class="col-sm-3" ng-repeat="project in projects">
+					<img ng-src={{project.thumbnail}} />
 					<div class="content">
 						<h3>{{project.title}}</h3>
 						<em>{{project.date}}</em>
@@ -75,5 +92,6 @@
 				</div>
 			</div>
 		</section>		
+
 	</body>
 </html>

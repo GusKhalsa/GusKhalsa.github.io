@@ -88,50 +88,6 @@ body {
 	text-align: center;
 }
 
-.career-container {
-	background: url("../img/background2.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	padding-bottom: 50% !important;
-	color:white; 
-}
-
-.career-container .col-sm-12 h1{
-	margin: 50px;
-}
-
-.education-container table, .experience-container table{
-	display: table;
-	position: center;
-	margin: auto;
-}
-
-table .date{
-	border-right: 1px solid rgba(0, 0, 0, 0.6);
-}
-
-table .data {
-	padding-left: 5%;
-	padding-bottom: 100px;
-}
-
-.experience-container table {
-	width: 40%;
-}
-
-.modules {
-	padding: 0.3em;
-}
-
-.modules a {
-	text-decoration: none;
-	font-size: 16px;
-	color: black;
-}
-
-
 /* ------------------------------------- */
 
 /* Footer */
