@@ -1,5 +1,6 @@
 var app = angular.module('MyApp', []);
 
+
 app.controller('NavController', function($scope){
 	$scope.options = [ 
 		{value: 'HOME', link: 'home.html'},
@@ -77,15 +78,43 @@ app.controller('ProfileController', function($scope){
 
 app.controller('ProjectController', function($scope){
 	$scope.projects = [
-	{thumbnail: "img/profilepic1.JPG", title: "Coming Soon", 
-	description: "This is the description for the project",
-	date:"01/01/1914", downloadLink: ""},
-	{thumbnail: "img/profilepic1.JPG", title: "Project2",
-	description: "This is the description for the project", 
-	date:"01/02/1915", downloadLink: ""},
-	{thumbnail: "img/profilepic1.JPG", title: "Project3", 
-	description: "This is the description for the project", 
-	date:"01/03/1916", downloadLink: ""}
+	{thumbnail: "img/profilepic1.JPG",
+	 title: "Coming Soon", 
+	 description: "This is the description for the project",
+	 date:"01/01/1914",
+	 downloadLink: ""},
+	{thumbnail: "img/profilepic1.JPG",
+	 title: "Project2",
+	 description: "This is the description for the project", 
+	 date:"01/02/1915",
+	 downloadLink: ""},
+	{thumbnail: "img/profilepic1.JPG", 
+	 title: "Project3", 
+	 description: "This is the description for the project", 
+	 date:"01/03/1916",
+	 downloadLink: ""}
 	];
+});
+
+app.controller('BlogController', function($scope, $http){
+	$http({
+	    method: 'get', 
+	    url: 'blogposts.json'
+	}).then(function (response) {
+	    $scope.posts = response.data;
+	},function (error){
+	    console.log(error, 'can not get data.');
+	});	
+});
+
+app.controller('SinglePostController', function($scope, $http, $routeParams){
+	$http({
+	    method: 'get', 
+	    url: 'blogposts.json'
+	}).then(function (response) {
+	    $scope.post = response.data[$routeParams.id];
+	},function (error){
+	    console.log(error, 'can not get data.');
+	});	
 });
 

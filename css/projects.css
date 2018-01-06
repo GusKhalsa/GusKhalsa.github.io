@@ -8,13 +8,8 @@ h1 {
 
 .project-container {
 	text-align: center;
-	margin-top: 5%;
 	color: white;
-	background: url("../img/background2.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
+	background: #334055;
 }
 
 .project-container #project-listing .col-sm-3 img {
@@ -34,7 +29,8 @@ h1 {
 
 .content {
 	background: rgba(255, 255, 255, 0.3);
-	width: 250px;
+	width: 300px;
+	font-family: 'Karla', sans-serif;
 }
 
 .project-container #project-listing .col-sm-4 a {
