@@ -8,7 +8,8 @@
 				<h3>{{post.title}}</h3>
 				<em>{{post.date}}</em>
 				<p>{{post.content | limitTo: 250}}...</p>
-				<a href="#">Read More &rarr;</a>
+				<p>{{post.indexOf('post')}}</p>
+				<a href="#!/blog/post/{{$index}}">Read More &rarr;</a>
 			</article>
 		</div>
 	</div>
