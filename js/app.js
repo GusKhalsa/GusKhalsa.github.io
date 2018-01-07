@@ -9,6 +9,13 @@ app.config(function($routeProvider){
 		.when('/blog', {
 			templateUrl: 'views/blog.html',
 			controller: 'BlogController'
+		})
+		.when('/blog/:id', {
+			templateUrl: 'singleblogpost.html',
+			controller: 'SinglePostController'
+		})
+		.otherwise({
+			redirectTo('/')
 		});
 
 });
