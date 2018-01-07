@@ -35,13 +35,14 @@
 	</div>
 	<div class="row" id="project-listing" ng-controller="ProjectController">
 		<div class="col-sm-3" ng-repeat="project in projects">
+			<a ng-href={{project.downloadLink}}>
 			<img ng-src={{project.thumbnail}} />
 			<div class="content">
 				<h3>{{project.title}}</h3>
 				<em>{{project.date}}</em>
 				<p>{{project.description}}</p>
-				<a ng-href={{project.downloadLink}}><span class="glyphicon glyphicon-download-alt"></span></a>
 			</div>
+			</a>
 		</div>
 	</div>
 </section>		
