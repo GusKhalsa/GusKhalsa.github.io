@@ -8,7 +8,7 @@
 				<h3>{{post.title}}</h3>
 				<em>{{post.date}}</em> <br />
 				<p ng-bind-html="post.content | limitTo: 250"></p><span>...</span><br /><br />
-				<a href="#!/blog/post/{{$index}}">Read More &rarr;</a>
+				<a href="#!/blog/post/{{$index}}" class="read-more">Read More &rarr;</a>
 			</article>
 		</div>
 	</div>

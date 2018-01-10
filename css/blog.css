@@ -31,14 +31,14 @@ article h3 {
 	font-family: 'Karla', sans-serif;
 }
 
-.blog-post a {
+.blog-post .read-more {
 	color: black;
 	padding: 0.2em 1em; 
 	text-decoration: none;
 	border-radius: 5%;
 }
 
-.blog-post a:hover {
+.blog-post .read-more:hover {
 	border: 1px solid black;
 	color: black;
 	text-decoration: none;
