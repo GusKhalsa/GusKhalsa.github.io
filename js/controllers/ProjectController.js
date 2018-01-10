@@ -1,19 +1,19 @@
 app.controller('ProjectController', function($scope){
 	$scope.projects = [
-	{thumbnail: "img/profilepic1.JPG",
-	 title: "Coming Soon", 
-	 description: "This is the description for the project",
-	 date:"01/01/1914",
+	{thumbnail: "",
+	 title: "Placeholder", 
+	 description: "This is a placeholder for a project that will be placed here at some point.",
+	 date:"",
 	 downloadLink: ""},
-	{thumbnail: "img/profilepic1.JPG",
-	 title: "Project2",
-	 description: "This is the description for the project", 
-	 date:"01/02/1915",
+	{thumbnail: "",
+	 title: "Placeholder",
+	 description: "This is a placeholder for a project that will be placed here at some point.", 
+	 date:"",
 	 downloadLink: ""},
-	{thumbnail: "img/profilepic1.JPG", 
-	 title: "Project3", 
-	 description: "This is the description for the project", 
-	 date:"01/03/1916",
+	{thumbnail: "", 
+	 title: "Placeholder", 
+	 description: "This is a placeholder for a project that will be placed here at some point.", 
+	 date:"",
 	 downloadLink: ""}
 	];
 });
