@@ -1,4 +1,5 @@
 app.controller('BlogController', function($scope, $http){
+	
 	$http({
 	    method: 'get', 
 	    url: 'blogposts.json'
@@ -7,5 +8,6 @@ app.controller('BlogController', function($scope, $http){
 		},function (error){
 		    console.log(error, 'can not get data.');
 	});	
+
 });
 
