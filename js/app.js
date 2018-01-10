@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', ['ngRoute']);
+var app = angular.module('MyApp', ['ngRoute', 'ngSanitize']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -10,12 +10,9 @@ app.config(function($routeProvider){
 			templateUrl: 'views/blog.html',
 			controller: 'BlogController'
 		})
-		.when('/blog/:id', {
-			templateUrl: 'singleblogpost.html',
+		.when('/blog/post/:id', {
+			templateUrl: 'views/singleblogpost.html',
 			controller: 'SinglePostController'
-		})
-		.otherwise({
-			redirectTo('/')
 		});
 
 });
