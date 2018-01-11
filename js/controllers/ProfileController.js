@@ -59,7 +59,7 @@ app.controller('ProfileController', function($scope){
 	$scope.CV = "resources/GKCV.pdf";
 	$scope.contacts = [
 		{icon: 'img/github.png', link: 'https://github.com/GusKhalsa'},
-		{icon: 'img/linkedin.png', link: 'www.linkedin.com/in/gursimran-khalsa'},
+		{icon: 'img/linkedin.png', link: 'https://www.linkedin.com/in/gursimran-khalsa'},
 		{icon: 'img/facebook.png', link: 'https://facebook.com/gus.khalsa7'}
 	];
 });
