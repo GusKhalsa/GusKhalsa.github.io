@@ -100,4 +100,8 @@ html, body {
 	#title {
 		font-size: 30px;
 	}
+
+	#cv-button {
+		width: 100%;
+	}
 }
