@@ -1,6 +1,6 @@
 var app = angular.module('MyApp', ['ngRoute', 'ngSanitize']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider, $locationProvider){
 	$routeProvider
 		.when('/', {
 			templateUrl: 'views/home.html',
@@ -14,5 +14,9 @@ app.config(function($routeProvider){
 			templateUrl: 'views/singleblogpost.html',
 			controller: 'SinglePostController'
 		});
+
+		$locationProvider.hashPrefix('');
+		$locationProvider.html5Mode(true);
+
 
 });
