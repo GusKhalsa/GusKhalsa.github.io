@@ -1,6 +1,8 @@
+
 html, body {
 	overflow-x: hidden;
 }
+
 /* ---------------------------------------- */
 
 /* Jumbotron + Social links */
@@ -74,6 +76,7 @@ html, body {
 
 #cv-button {
 	padding: 1em 0px;
+	margin-left: 15px;
 	width: 95.7%;
 	color: black;
 	text-decoration: none;
@@ -90,5 +93,11 @@ html, body {
 }
 
 .aboutme-container p {
-	margin: auto auto;
+	margin: auto 2em;
+}
+
+@media screen and (max-width: 767px){
+	#title {
+		font-size: 30px;
+	}
 }
