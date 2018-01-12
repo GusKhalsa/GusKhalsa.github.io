@@ -1,13 +1,6 @@
-
-body {
-	-webkit-font-smoothing: antialiased;		
-	margin: 0px;
-	padding: 0px;
-	height: 100%;
-	width: 100%;
+html, body {
 	overflow-x: hidden;
 }
-
 /* ---------------------------------------- */
 
 /* Jumbotron + Social links */
@@ -81,7 +74,6 @@ body {
 
 #cv-button {
 	padding: 1em 0px;
-	margin-left: 15px;
 	width: 95.7%;
 	color: black;
 	text-decoration: none;
@@ -98,11 +90,5 @@ body {
 }
 
 .aboutme-container p {
-	margin: auto 2em;
-}
-
-@media screen and (max-width: 767px){
-	#title {
-		font-size: 30px;
-	}
+	margin: auto auto;
 }
