@@ -52,8 +52,12 @@ header {
 	margin: 1.5em;
 }
 
-@media screen and (max-width: 350px) {
-    #menu img{
-        float: right;
-    }
+@media screen and (max-width: 460px) {
+	#menu ul li a {
+		font-size: 10px;
+	}
+
+	.navOptions {
+		margin: 1.5em 0.5em;
+	}
 }

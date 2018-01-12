@@ -1,9 +1,8 @@
-*{
-	/*border: 1px solid rgba(255, 255, 255, 0.3);*/
-}
 
 body {
 	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;		
 }
 
 /* ---------------------------------------- */
@@ -64,15 +63,23 @@ body {
 
 #profilepic, #cv-button {
 	display: block;
-	width: 100%;
-	height: 100%;
-	margin-left: -30px;
+	height: auto;
 	border: 1px solid black;
 }
 
+#profile-container .row .img-container #profilepic {
+	width: 100%;
+	object-fit: cover;
+}
+
+#profile-container .row .col-sm-6 {
+	padding: 0;
+}
+
 #cv-button {
-	padding: 1em;
-	width: 97.7%;
+	padding: 1em 0px;
+	margin-left: 15px;
+	width: 95.7%;
 	color: black;
 	text-decoration: none;
 }
@@ -87,10 +94,22 @@ body {
 	text-align: center;
 }
 
-/* ------------------------------------- */
+.aboutme-container p {
+	margin: auto 2em;
+}
 
-/* Footer */
-footer {
-	margin-top: 1.3em;
-	border-top: 1px solid black;
+@media screen and (max-width: 767px){
+	#title {
+		font-size: 30px;
+	}
+
+	#profilepic, #cv-button {
+		margin: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#cv-button {
+		padding-right: 0px;
+	}
 }
