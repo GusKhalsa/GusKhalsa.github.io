@@ -1,8 +1,11 @@
 
 body {
-	-webkit-font-smoothing: antialiased;
-	margin: 0;
-	padding: 0;		
+	-webkit-font-smoothing: antialiased;		
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 /* ---------------------------------------- */
@@ -101,15 +104,5 @@ body {
 @media screen and (max-width: 767px){
 	#title {
 		font-size: 30px;
-	}
-
-	#profilepic, #cv-button {
-		margin: auto;
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	#cv-button {
-		padding-right: 0px;
 	}
 }
