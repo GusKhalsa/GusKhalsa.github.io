@@ -1,7 +1,8 @@
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} -s [OR]
-RewriteCond %{REQUEST_FILENAME} -l [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^.*$ - [NC,L]
+RewriteEngine On 
+Options FollowSymLinks
 
-RewriteRule ^(.*) /index.html [NC,L]
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /#/$1 [L]
