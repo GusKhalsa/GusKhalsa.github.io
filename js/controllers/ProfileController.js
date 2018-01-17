@@ -4,7 +4,6 @@ app.controller('ProfileController', function($scope){
 	$scope.profilepicture = "../img/profilepic.JPG";
 	$scope.DOB = "07/08/1998";
 	$scope.email = "gk264@kent.ac.uk";
-	$scope.number = "07443036441";
 
 	$scope.education = [
 	{school: 'Northfleet Technology College',
