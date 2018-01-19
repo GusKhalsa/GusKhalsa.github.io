@@ -93,7 +93,6 @@ html, body {
 	background: #334055;
 	color: white;
 	height: 537px;
-	max-height: 537px;
 }
 
 .aboutme-container p {
@@ -111,5 +110,18 @@ html, body {
 
 	.aboutme-container {
 		margin-top: -20px;
+	}
+}
+
+@media screen and (min-width: 767px) {
+	#profile-container .row {
+		display: -webkit-box;
+  		display: -webkit-flex;
+  		display: -ms-flexbox;
+  		display: flex;
+	}
+
+	.img-container, .aboutme-container {
+		height: auto;
 	}
 }
