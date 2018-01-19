@@ -90,6 +90,9 @@ html, body {
 
 .aboutme-container {
 	text-align: center;
+	background: #334055;
+	color: white;
+	height: 537px;
 }
 
 .aboutme-container p {
@@ -103,5 +106,9 @@ html, body {
 
 	#cv-button {
 		width: 100%;
+	}
+
+	.aboutme-container {
+		margin-top: -20px;
 	}
 }

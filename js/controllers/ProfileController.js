@@ -1,7 +1,7 @@
 app.controller('ProfileController', function($scope){
 	$scope.fullName = "Gursimran Khalsa";
 	$scope.shortName = "Gus";
-	$scope.profilepicture = "../img/profilepic1.JPG";
+	$scope.profilepicture = "../img/profilepic.JPG";
 	$scope.DOB = "07/08/1998";
 	$scope.email = "gk264@kent.ac.uk";
 
