@@ -93,6 +93,7 @@ html, body {
 	background: #334055;
 	color: white;
 	height: 537px;
+	max-height: 537px;
 }
 
 .aboutme-container p {
