@@ -8,6 +8,12 @@
 
 .blog-title {
 	padding-bottom: -75px;
+	background: #334055;
+}
+
+.blog-block {
+	 background: white;
+
 }
 
 .container .blog-container{
