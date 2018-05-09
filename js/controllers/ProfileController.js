@@ -55,7 +55,7 @@ app.controller('ProfileController', function($scope){
 	 skillsObtained: ['Communication', 'Code Readability']}
 	];
 
-	$scope.CV = "resources/GKhalsaCVForWebsite.pdf";
+	$scope.CV = "resources/GKhalsaCVForWebSite.pdf";
 	$scope.contacts = [
 		{icon: 'img/github.png', link: 'https://github.com/GusKhalsa'},
 		{icon: 'img/linkedin.png', link: 'https://www.linkedin.com/in/gursimran-khalsa'},
